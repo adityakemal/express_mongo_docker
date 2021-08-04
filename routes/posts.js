@@ -16,6 +16,16 @@ router.get('/', verifyToken,  (req,res)=>{
 
 })
 
+// get datas without token
+router.get('/notoken',  (req,res)=>{
+    Post.find().then(data=>{
+        res.json({data : data, status : 200, length : data.length, token_user_id : req.user})
+    }).catch(err=>{
+        res.json({message : err})
+    })
+
+})
+
 // post datas
 router.post('/',(req,res)=>{
     console.log(req.body)

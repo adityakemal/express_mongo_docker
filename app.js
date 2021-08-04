@@ -11,9 +11,10 @@ app.use(cors())
 
 const postRoute = require('./routes/posts')
 const authRoute = require('./routes/auth')
+
 //import route
-app.use('/posts', postRoute)
-app.use('/auth', authRoute)
+app.use('/api/post', postRoute)
+app.use('/api/auth', authRoute)
 
 
 app.get('/', (req,res)=>{
