@@ -21,7 +21,7 @@ app.get('/', (req,res)=>{
 })
 
 
-var server = "mongodb://localhost:8080/db_test";
+var server = "mongodb://localhost:27017/db_test";
 // connect to db 
 mongoose.connect( 
     // process.env.DB_CONNETION, //mlab.com
